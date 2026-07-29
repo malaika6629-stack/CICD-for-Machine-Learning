@@ -32,7 +32,7 @@ hf-login:
 	hf auth login --token $(HF) --add-to-git-credential
 
 push-hub:
-	hf upload iqranaz/Drug-Classification ./Model/drug_pipeline.skops drug_pipeline.skops --repo-type=model --commit-message="Sync Model weights"
-	hf upload iqranaz/Drug-Classification ./App . --repo-type=space --commit-message="Sync App files"
+	hf upload malaika568/Drug-Classification ./Model/drug_pipeline.skops drug_pipeline.skops --repo-type=model --commit-message="Sync Model weights"
+	hf upload malaika568/Drug-Classification ./App . --repo-type=space --commit-message="Sync App files"
 	
 deploy: hf-login push-hub
