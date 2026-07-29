@@ -1,3 +1,4 @@
 gradio
-scikit-learn
 skops
+huggingface_hub
+scikit-learn

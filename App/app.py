@@ -1,7 +1,13 @@
 import gradio as gr
 import skops.io as sio
+from huggingface_hub import hf_hub_download
 
-model_path = "./Model/drug_pipeline.skops"
+model_path = hf_hub_download(
+    repo_id="malaika568/Drug-Classification",
+    filename="drug_pipeline.skops",
+    repo_type="model",
+)
+
 untrusted_types = sio.get_untrusted_types(file=model_path)
 pipe = sio.load(model_path, trusted=untrusted_types)
 
